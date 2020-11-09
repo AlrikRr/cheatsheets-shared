@@ -1,0 +1,27 @@
+---
+syntax: bash
+tags: [shared, bash,condition, statements ]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ If statement
+
+if [ <some test> ]
+then
+	<commands>
+elif [ <some test> ]
+then
+	<different commands>
+else
+	<other commands>
+fi
+
+### Check if string in variable
+string='My long string'
+if [[ $string == *"My long"* ]]; then
+  echo "It's there!"
+fi
+
+
+

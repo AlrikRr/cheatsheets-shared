@@ -1,0 +1,45 @@
+---
+tags:[shared,  server, fail2ban ] 
+---
+
+
+# Install fail2ban
+$ apt install fail2ban
+
+# The configuration file for fail2ban is located here  /etc/fail2ban/jail.conf
+# But it's not recommanded to edit this file directly because it can be edited during an update.
+
+# Execution order of configuration file :
+1-    /etc/fail2ban/jail.conf
+2-    /etc/fail2ban/jail.d/defaults-debian.conf
+3-    /etc/fail2ban/jail.local
+
+# Create config file
+$ sudo nano /etc/fail2ban/jail.local
+
+# Activate sshd plugin
+[sshd]
+enabled = true
+
+# Default jail -> 5 connection failed during 600s (10minutes) --> jail for 10 minutes
+# Add default section if you want
+[DEFAULT]
+# 1 day ban for all the plugins
+bantime = 86400
+
+# Specific IP tha you don't want to ban
+[DEFAULT]
+ignoreip = 127.0.0.1/8 123.456.789.12
+
+
+# Display logs
+$ sudo nano /var/log/fail2ban.log
+
+# Restart service
+$ sudo service fail2ban restart
+
+# Display current ban
+$ sudo fail2ban-client status
+
+# unban ip
+$ sudo fail2ban-client set <jailname> unbanip <ip>

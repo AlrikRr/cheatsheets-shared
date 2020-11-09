@@ -1,0 +1,24 @@
+---
+syntax: bash
+tags: [shared, bash, loop, until]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ Until loop
+
+until [ <some test> ]
+do
+	<commands>
+done
+
+
+### e.g
+
+counter=1
+until [ $counter -gt 10 ]
+do
+	echo $counter
+	((counter++))
+done
+echo All done

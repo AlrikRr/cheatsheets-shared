@@ -1,0 +1,26 @@
+---
+syntax: bash
+tags: [shared , bash, variable ]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ Variables
+
+### Simple
+
+myvar="toto"
+
+echo $myvar
+
+### With command
+
+variable=$(command)
+variable=$(command [option] arg1 arg2 ... )
+variable=$(/path/to/binary)
+
+variable=`command`
+variable=`command [option] arg1 arg2 `
+variable=`/path/to/binary`
+
+

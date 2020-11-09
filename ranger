@@ -1,0 +1,25 @@
+---
+tags: [shared, ranger,file explorer]
+---
+
+# Ranger File Manager / Explorer
+
+$ ranger
+
+# Copy / Paste
+$ yy
+
+$ p
+
+# Selection multiple
+$ [espace]
+
+# Delete
+$ :delete
+OR
+$ dD
+
+# Cut
+$ dd
+
+

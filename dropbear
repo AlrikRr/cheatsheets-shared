@@ -1,0 +1,32 @@
+---
+tags: [ shared, dropbear, luks, server ]
+---
+
+# Install required packages
+$ apt install dropbear-initramfs
+
+
+# Copy your public keys aurotized into the dropbear file
+ $ cp ~/.ssh/authorized_keys /etc/dropbear-initramfs
+
+# Configuration file
+$ nano etc/dropbear-initramfs/config
+    => DROPBEAR_OPTIONS="-p 4748"
+
+# Generate new initramfs
+$ update-initramfs -u
+
+# Put static IP into GRUB file
+$ nano /etc/default/grub
+    => GRUB_CMDLINE_LINUX="ip=192.168.1.90::192.168.1.1:255.255.255.0::enp0s3:off"
+
+# Update GRUB
+$ update-grub
+
+# Connect to the server:
+$ ssh root@IP -p 4748
+
+# Decrypt the luks
+$ cryptroot-unlock
+
+# Enter the pass-phrase

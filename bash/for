@@ -1,0 +1,45 @@
+---
+syntax: bash
+tags: [shared, bash, loop, for ]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ For loop
+
+for var in <list>
+do
+	<commands>
+done
+
+
+### e.g
+
+names='Stan Kyle Cartman'
+
+for name in $names
+do
+	echo $name
+done
+
+echo All done
+
+
+### range
+
+for value in {1..5}
+do
+	echo $value
+done
+echo All done
+
+### stepping
+
+
+for value in {10..0..2} # 10 to 0 step 2
+do
+	echo $value
+done
+echo All done
+
+

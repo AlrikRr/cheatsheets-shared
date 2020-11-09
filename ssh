@@ -1,0 +1,17 @@
+---
+tags : [ shared, ssh, server ]
+---
+
+Tag[ssh]
+# Generate keys
+ssh-keygen -t <algo>
+
+# Copy id from another server
+ssh-copy-id -p <port> <user>@<IP>
+
+# .ssh/config
+Host <name>
+	hostname <ip>
+	user <user>
+	port <port>
+

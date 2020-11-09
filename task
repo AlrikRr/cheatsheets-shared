@@ -1,0 +1,57 @@
+---
+tags:[shared, task,todo,taskwarrior]
+---
+
+# TaskWarrior CheatSheet
+
+# Ajouter une tâche simple
+$ task add Ma tâche du jour
+
+# Modifier une tâche
+$ task 1 modify 
+
+# Ajouter une tâche à un projet
+$ task add Ma tâche du jour project:MonProjet
+$ task add Tâche project:"Un gros projet"
+
+# Pour afficher les tâches
+$ task next
+$ task list
+
+# Mettre une deadline : AAAA-MM-JJ
+$ task add TEST due:2020-22-09
+
+# Démarrer une tâche : Déclenche un timer
+$ task 2 start
+
+
+#Priority
+#
+# High
+$ task add priority:H Manger le chat
+# Medium
+$ task add priority:M Cuisiner le chat
+# Low
+$ task add priority:L Attraper le chat
+
+## Graphic
+#
+# Afficher le calendier
+$ task calendar
+
+### TAG 
+#
+# Mettre un TAG
+$ task add tutu +toto
+
+# Retirer un TAG
+$ task modify 1 -toto
+
+# Recherche
+$ task /toto/ list
+
+
+### COULEURS
+
+# Ajouter fond jaune et text noir a un projet
+$ task config color.project.Coding 'bold black on yellow'

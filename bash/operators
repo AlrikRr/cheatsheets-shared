@@ -1,0 +1,36 @@
+---
+syntax: bash
+tags: [shared, bash, operators]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ Logical operators
+
+and -> &&
+
+or  -> ||
+
+-eq ->  is equal to
+
+-ne ->  is not equal to
+
+-gt ->  is greater than
+
+-ge ->  is greater than or equal to
+
+-lt ->  is less than
+
+-le ->  is less than or equal to
+
+<   ->  is less than (within double parentheses)
+
+<=  ->  is less than or equal to (within double parentheses)
+
+>   ->  is greater than (within double parentheses)
+
+>=  ->  is greater than or equal to (within double parentheses)
+
+==  -> Strings : Equal
+
+!=  -> Strings : Not Equal

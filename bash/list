@@ -1,0 +1,23 @@
+---
+syntax: bash
+tags: [shared, bash, list ]
+---
+
+# Bash Language & Syntax Cheat Sheet
+
+## ------------------------------ list manupulation
+
+### Display all elements in list
+
+bad=('toto'
+     'tutu')
+
+for x in "${bad[@]}"; do
+  echo $x
+done
+
+
+### Add element into list
+
+bad+=("new")
+

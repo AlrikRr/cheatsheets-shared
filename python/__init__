@@ -1,0 +1,28 @@
+---
+syntax: python
+tags: [shared, python, import, init ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ import another python script
+
+### create __init__.py
+
+- main.py
+- Scripts/
+	- __init__.py
+	- Myfunction.py
+	- Mysecondefunction.py
+
+### Write __init__.py
+
+__all__ = ["Myfunction", "Mysecondefunction"]
+
+### Write main.py
+
+from Scripts import *
+
+Myfunction.main_myfunction()
+
+Mysecondefunction.main_second()

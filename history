@@ -1,0 +1,24 @@
+---
+tags: [shared,history]
+---
+
+# Don't save the command that start with space key
+export HISTCONTROL="ignorespace"
+
+# Don't display diplucates
+export HISTCONTROL="ignoredups"
+
+# Delete all duplicates
+export HISTCONTROL="erasedups"
+
+# Combo !
+export HISTCONTROL="erasedups:ignorespace"
+
+# Edit command stockage
+export HISTFILESIZE = 10000
+
+# Ignore ls and cd
+export HISTIGNORE="ls*:cd*"
+
+# Addd date and time
+export HISTTIMEFORMAT="%d/%m/%Y %H:%M:%S "
