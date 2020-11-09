@@ -1,0 +1,30 @@
+---
+syntax: python
+tags: [shared , python, subprocess ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Subprocessing bash command
+
+### import
+
+import subprocess
+
+### simple command
+
+ls = subprocess.Popen(["ls", "-al"], stdout=subprocess.PIPE)
+            output, err = ls.communicate()
+
+print(output.decode())
+
+
+### simple command with pipe
+
+mount = subprocess.Popen(('mount'), stdout=subprocess.PIPE)
+output = subprocess.check_output(('grep', usb_path), stdin=mount.stdout)
+mount.wait()
+
+print(output.decode())
+
+

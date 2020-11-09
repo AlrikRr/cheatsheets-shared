@@ -1,0 +1,29 @@
+---
+syntax: python
+tags: [shared, python, conditions, if, else ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ if elif else
+
+if i == 7:
+	print("seven")
+elif i == 8:
+	print("eight")
+else:
+	print(str(i))
+## ------------------------------ AND
+
+if i == 2 and x == 2:
+	print("Both are 2")
+else:
+	print("One is not 2 ...")
+
+## ------------------------------ OR
+
+if i ==2 or x == 2:
+	print("One is 2")
+else:
+	print("Both are not 2")
+

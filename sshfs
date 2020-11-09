@@ -1,0 +1,12 @@
+---
+tags [ shared, ssh, server ]
+---
+
+# SSHSF
+
+**Install**
+- apt install sshfs
+
+**Connect**
+- sshfs [user]@[ip]:/home/[user]/COFFRE Coffre
+

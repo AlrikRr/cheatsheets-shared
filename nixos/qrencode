@@ -1,0 +1,9 @@
+---
+tags: [ shared, nixos, package ]
+---
+
+# qrencode install
+$ nix-env -iA nixos.qrencode
+
+# Utilisation
+qrencode -t ansiutf8 < conf_phone

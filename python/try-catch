@@ -1,0 +1,27 @@
+---
+syntax: python
+tags: [shared , python, exceptions, try, catch]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Exceptions
+
+try:
+	<body>
+	raise Exception()
+except Exception as e:
+	<exception handling>
+finally:
+	<clean-up>
+
+### e.g
+
+try:
+	database.update()
+except Exception as a:
+	log.error(e.msg)
+	database.abort()
+finally:
+	database.commit()
+

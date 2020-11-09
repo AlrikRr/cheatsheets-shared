@@ -1,0 +1,23 @@
+---
+tags: [shared, lvm, cryptsetup, coffre]
+---
+
+# Create encrypt VAULT into an existing VolumeGroup
+
+# Check free space
+$ vgs
+
+# Create LogicalVolume lv_coffre with 500Mb
+$ lvcreate -L 500MB -n lv_coffre VGCRYPT
+
+# Encrypt with cryptsetup lv_coffre
+$ cryptsetup luksFormat /dev/mapper/VGCRYPT-lv_coffre
+
+# Open encrypted lv_coffre
+$ cryptsetup luksOpen /dev/mapper/VGCRYPT-lv_coffre COFFRE
+
+# Format with  xfs filesystem
+$ sudo mkfs.xfs /dev/mapper/COFFRE
+
+# mount xfs into /root/COFFRE
+sudo mount -t xfs /dev/mapper/COFFRE /root/COFFRE/

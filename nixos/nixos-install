@@ -1,0 +1,74 @@
+---
+tags: [shared, install, nixos]
+---
+
+# Install EFI NIXOS With 25 GB Disk
+# Encryption
+
+# Display help
+$ nixos-help
+
+# Display partition
+$ lsblk
+
+# Open parted and free 2Gb for SWAP
+$ parted /dev/sda -- mklabel gpt
+$ parted /dev/sda -- mkpart primary 512MiB -2GiB
+$ parted /dev/sda -- mkpart primary -2GiB 100%
+
+#Create ESP Partition
+$ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB
+$ parted /dev/sda -- set 3 boot on
+
+#Cryptsetup 
+$ cryptsetup luksFormat /dev/sda1
+$ cryptsetup luksOpen /dev/sda1 nixos-root
+
+#Check if everything is good
+$ ls -l /dev/mapper
+
+#BTRFS nixos-root
+mkfd.btrfs -L nixroot /dev/mapper/nixos-root
+
+# Create SWAP
+$ mkswap /dev/sda2
+$ swapon /dev/sda2
+
+# Check freespace
+$ free -hm
+
+# Create BOOT 
+$ mkfs.vfat -n BOOT /dev/sda3
+
+# Mount nixos-root on /mnt
+$ mount -t btrfs /dev/mapper/nixos-root /mnt
+
+# Init btrfs subvolume
+$ btrfs subvolume create /mnt/nixos
+$ btrfs subvolume list /mnt
+
+# Umount mnt and mount nix-root with btrfs
+$ umount /mnt
+$ mount -t btrfs -o subvol=nixos /dev/mapper/nixos-root /mnt
+$ cd /mnt
+$ ls
+
+# BTRFS create subvolume
+$ btrfs subvolume create /mnt/home
+$ btrfs subvolume create /mnt/var
+$ btrfs subvolume create /mnt/nix
+$ btrfs subvolume list /mnt
+$ mkdir /mnt/boot
+
+# Mount boot
+$ mount /dev/sda3 /mnt/boot
+$ ls -l /mnt
+
+# Generate config
+$ nixos-generate-config --root /mnt
+
+# Install
+$ nixos-install
+
+
+

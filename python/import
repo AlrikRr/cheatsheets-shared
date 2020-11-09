@@ -1,0 +1,12 @@
+---
+syntax: python
+tags: [shared, python, import]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Imports
+
+import module
+from module import class, function, variable
+

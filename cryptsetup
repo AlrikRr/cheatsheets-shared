@@ -1,0 +1,26 @@
+---
+tags: [shared, cryptsetup]
+---
+
+# cryptsetup
+
+## random key with dd
+$ dd if=/dev/random of=/root/foo.key bs=1 count=256
+
+## Save header
+$ cryptsetup luksHeaderBackup --header-backup-file backup.txt /dev/sda
+
+## Restore header
+$ cryptsetup luksHeaderRestore --header-backup-file backup.txt /dev/sda7
+
+## Add keyfile on slot 3
+$ cryptsetup -v luksAddKey /dev/sdb1 256.key -S 3
+$ sudo chmod -R 700 /etc/keys/coffre.key
+
+## ADD crypttab
+nano /etc/crypttab
+- `md2_crypt UUID=2c380e8b-a544-46a0-8c81-75a2822fac5e /etc/luks-keys/backup_secret_key luks,discard`
+$ cryptdisks_start md2_crypt`
+
+# Decrypt with key file
+$ cryptsetup luksOpen /dev/sdb1 coffre --key-file /etc/luks-keys/luks.key 

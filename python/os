@@ -1,0 +1,36 @@
+---
+syntax: python
+tags: [shared, python, os]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ os module 
+
+import os 
+
+### join path with another path
+
+os.path.join(path_segment1, path_segment2, ... )
+
+
+### Check if path exist
+
+os.path.exists(path)
+
+
+### Display file in path
+
+os.listdir(directory_path)
+
+
+### Remove file in path
+
+os.remove(file_path)
+
+
+### Remove directory in path
+
+os.rmdir(directory_path)
+
+

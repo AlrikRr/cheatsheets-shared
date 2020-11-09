@@ -1,0 +1,45 @@
+---
+tags: [shared, linux,lpic,shell,cheatsheet]
+---
+
+
+# CheatSheet Commandes
+
+#### SHORTCUT ####
+
+
+- Ctrl + a = Debut
+- Ctrl + e = Fin
+- Ctrl + h = Efface tout
+- Ctrl + k = Efface la fin du curseur
+
+#### DEPLACEMENTS ####
+
+# Revenir au répertoire précédent
+$ cd -
+
+#### DOCUMENTS ####
+
+# Créer un dossier / sous dossier en même temps
+$ mkdir -p <dir>/<dir>
+
+# Afficher les dossiers / sous dossiers
+$ ls -R
+
+#### COPY ####
+
+# Copier recursivement
+$ cp -r Dossier  Destination/
+
+#### PATH NAME EXPANSION ####
+
+# User toto's home directory
+$ cd ~toto
+
+# Current working dir
+$ rm -ri ~+
+
+# Previous working dir
+$ ls ~-
+
+

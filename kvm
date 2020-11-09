@@ -1,0 +1,83 @@
+---
+tags: [shared, server, debian, vm]
+---
+
+
+# Installation de KVM sur un Server DEBIAN
+# Prérequis > 0:
+$ egrep -c '(vmx|svm)' /proc/cpuinfo
+
+# Installation des paquets
+$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+
+# Check the status of lib libvirt
+$ sudo systemctl status libvirtd.service
+
+# Run the below virsh command to list available networks for kvm VMs
+$ sudo virsh net-list --all
+
+# set default network active every boot / autostart
+$ sudo virsh net-autostart default
+
+# add “vhost_net” kernel module on your system using the beneath command
+$ sudo modprobe vhost_net
+$ echo "vhost_net" | sudo  tee -a /etc/modules
+$ lsmod | grep vhost
+
+# If you want a normal user to use virsh commands then add that user to libvirt and libvirt-qemu group using the following commands
+$ sudo adduser eidorian libvirt
+$ sudo adduser eidorian libvirt-qemu
+$ newgrp libvirt
+$ ewgrp libvirt-qemu
+
+# Create bridge
+$ sudo nano /etc/network/interfaces
+#Configure bridge and give it a static ip
+iface enp0s31f6 inet manual
+
+iface br0 inet static
+        bridge_ports enp0s31f6
+        address 192.168.1.11
+        broadcast 192.168.1.255
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+
+# Create VM command line
+$ sudo virt-install --name nezuko --os-type linux --os-variant debian10 --ram 1024 --vcpu 1 --disk path=/var/lib/libvirt/images/nezuko.qcow2,size=20 --graphics vnc,listen=0.0.0.0 --noautoconsole --hvm --cdrom /home/eidorian/debian-10.iso --boot cdrom,hd
+
+# Start VM
+$ virsh start nezuko
+
+# Display VNC port
+$ sudo virsh vncdisplay nezuko
+
+
+# Shutdown
+$ virsh shutdown nezuko
+
+# FORCE Shutdown
+$ virsh destroy nezuko
+
+# Delete
+$ virsh undefine nezuko
+
+# Suspend
+$ virsh suspend nezuko
+
+# resume
+$ virsh resume nezuko
+
+# edit configuration from VM
+$ virsh edit nezuko
+
+# Change keyboard with vnc
+$ sudo nano /etc/libvirt/qemu/nezuko.xml
+<graphics type='vnc' port='-1' autoport='yes' passwd="password" listen='0.0.0.0' keymap="fr">
+
+# Display keymap
+$ ls /usr/share/qemu-kvm/keymaps/
+
+# Os-variant
+# install libosinfo-bin
+$ sudo libosinfo-bin
+$ osinfo-query os

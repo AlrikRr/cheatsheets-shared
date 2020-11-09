@@ -1,0 +1,19 @@
+---
+tags: [ shared, python, anaconda, archlinux ]
+---
+
+# Anaconda Install Archlinux Step by step
+
+
+# Packages
+$ sudo pacman -Sy libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl  alsa-lib libglvnd
+
+# Download Anaconda 
+[anaconda-download](https://www.anaconda.com/products/individual#linux)
+
+$ bash Anaconda.sh
+
+# Install procedure
+# Download Pycharm as your wish
+
+

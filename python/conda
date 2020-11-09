@@ -1,0 +1,138 @@
+---
+syntax: bash
+tags: [ shared, python, anaconda, conda ]
+---
+
+# CONDA CHEAT SHEET
+
+## ------------------------------- Conda basics
+
+### Check if conda is installed
+$ conda info
+
+### Update conda to the current version
+$ conda update conda
+
+### Install a package included in Anaconda
+$ conda install <package-name>
+
+### Run package after install
+$ <package-name>
+
+### Update any installed program
+$ conda update <package-name>
+
+### Command line help
+$ <command-name> --help
+$ conda install --help
+
+## -------------------------------- Using environments
+
+### Create a new env named py35, install Python 3.5
+$ conda create --name py35 python=3.5
+
+### Activate the new env to use it
+WINDOWS 	: $ activate py35
+LINUX, macOS 	: $ source activate py35
+
+### Get a list of all my env, active
+$ conda env list
+
+### Make exact copy of env
+$ conda create --clone py35 --name py35-copy
+
+### List all packages and versions install in active env
+$ conda list
+
+### List the history of each change to the current env
+$ conda list --revisions
+
+### Restore env to a previous revision
+$ conda install --revision 2
+
+### Save env to a text file
+$ conda list --explicit > bio-env.txt
+
+### Delete an env and everything in it
+$ conda env remove --name bio-env
+
+### Deactivate the current env
+**WINDOWS**	: $ deactivate
+**LINUX,macOS**	: $ source deactivate
+
+### Create env from text file
+$ conda env create --file bio-env.txt
+
+### Stack command: create a new env, name it bio-env and install the biopython package
+$ conda create --name bio-env biopython
+
+## ------------------------------------ Finding conda packages
+
+### Use conda to search for a package
+$ conda search <package-name>
+
+### See list of all packages in Anaconda
+https://docs.anaconda.com/anaconda/packages/pkg-docs 
+
+## ------------------------------------ Installaing and updating packages
+
+### Install a new package (jupyter) in active env
+$ conda install jupyter
+
+### Run an installed package
+$ conda jupyter-notebook
+
+### Install a new package (toolz) in a different env (bio-env)
+$ conda install --name bio-env toolz
+
+### Update a package in the current env
+$ conda update toolz
+
+### Install a package (boltons) from a specific channel (conda-forge)
+$ conda install --channel conda-forge boltons
+
+### Install a package directly from PyPI into the current active env using pip
+$ conda pip install boltons
+
+### Remove one or more packages (toolz, boltons) from a specific env (bio-env)
+$ conda remove --name bio-env toolz boltons
+
+## ------------------------------------ Managing multiple versions of Python
+
+### Install different version of Python in a new en named py34
+$ conda create --name py34 python=3.4
+
+### Switch to the new env
+**WINDOWS**	: activate py34
+**LINUX,macOS**	: source active py34
+
+### Show the locations of all versions of Python that are in the PATH
+> NOTE : The first version of Python in the list will be executed.
+**WINDOWS*	: $ where python
+**LINUX,macOS*	: $ which -a python
+
+### Show version information for the current active Python
+$ python --version
+
+## ------------------------------------ Specifying version numbers
+
+---------------------------------------------------------------------------------
+| **Constraint type**		| **Specification**	| **Result**		|
+---------------------------------------------------------------------------------
+| Fuzzy				| numpy=1.11		| 1.11.0,1.11.1,etc.	|
+---------------------------------------------------------------------------------
+| Exact				| numpy==1.11		| 1.11.0		|
+---------------------------------------------------------------------------------
+| Greater than or equal to	| "numpy>=1.11"		| 1.11.0 or higher	|
+---------------------------------------------------------------------------------
+| OR				| "numpy=1.11.1|1.11.3"	| 1.11.1, 1.11.3	|
+---------------------------------------------------------------------------------
+| AND				| "numpy>=1.8,<2"	| 1.8, 1.9 not 2.0	|
+---------------------------------------------------------------------------------
+
+> NOTE : Quotation marks must be used when your specification contains a space or any of these characters : > < | *
+
+
+### Ressources 
+
+- https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf

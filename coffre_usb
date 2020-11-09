@@ -1,0 +1,73 @@
+---
+tags: [shared, lvm, cryptsetup, coffre]
+---
+
+# Coffre USB
+*Desc: How create a LUKS USB device using cryptseup*
+
+- install cryptsetup
+- install pv **optional**
+
+
+## Know your device
+Check the name of your device.
+- `# fdisk -l`
+Let's say for this tutorial, we'll use **sdb1** from the sdb disk.
+
+## Erase data
+- Brute mode `# dd if=/dev/zero of=/dev/sdb1 bs=1M`
+- Hard-core mode `# badblocks -c 10240 -s -w -t random -v /dev/sdb1`
+
+**optional**
+Using pv so that way you have a progress bar
+- `# pv -tpreb /dev/zero | dd of=/dev/sdb1 bs=1M`
+
+## Cryptsetup
+
+- `# cryptsetup luksFormat /dev/sdb1`
+
+Open the Luks device
+- `# cryptsetup luksOpen /dev/sdb1 usb_crypt`
+
+## Typefile
+
+- `# mkfs.ext4 /dev/mapper/usb_crypt`
+OR
+- `# mkfs.fat /dev/mapper/usb_crypt`
+OR
+- `# mke2fs /dev/mapper/usb_crypt`
+
+Finish !
+
+## Pro-Tips - 1
+If you don't have the permissions to write data on the disk, try :
+- `# sudo chown -R [username] /media/[username]/[UUID]/`
+
+## Pro-Tips - 2
+Sometimes it's append that the disk is not mounted automatically and you can't enter a passphrase on the message-box.
+
+**Open the luks**
+- cryptsetup luksOpen /dev/sdb1 usb_crypt
+
+**mount the luks**
+- mount /dev/mapper/usb_crypt /media/[username]/usb_crypt
+
+**umount the luks**
+- umount /media/[username]/usb_crypt
+
+**Close the luks**
+- cryptsetup luksClose usb_crypt
+
+## Pro-Tips - 3
+- Backing up your laptop to an SD Card in the same laptop is #notabackup
+- Backing up to a hard drive that is 6 inches away from your computer is #notabackup
+- Backing up your Gmail to another Gmail account is #notabackup
+- Backing up your book by copying it to another folder is #notabackup
+- The photos that are still in your camera memory are #notabackup
+
+- 3 copies of anything you care about - Two isn't enough if it's important.
+- 2 different formats - HDD + SSD or HHD + USB
+- 1 off-site backup - If the house burns down, how will you get your memories back?
+
+[Backup](https://www.hanselman.com/blog/TheComputerBackupRuleOfThree.aspx)
+

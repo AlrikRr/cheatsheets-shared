@@ -1,0 +1,50 @@
+---
+syntax: python
+tags: [shared, python, file, open]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ File Manipulation
+
+### open file : OPEN
+
+f = open("file.txt", "w", encoding="utf-8")
+
+
+f 		--> file variable
+
+"file.txt" 	--> name of file on disk (+path)
+
+"w"		--> opening mode
+			- "r" : read   ;
+			- "w" : write  ;
+			- "a" : append ; "+" ; "x" ; "b" ; "t" ...
+
+encoding	--> encoding of chars for text files : utf-8, ascii, latin1 ...
+
+### open file : WITH
+
+with open("file.txt", "w") as f:
+	for line in f :
+		print(line)
+
+### Writing
+
+f.write("coucou")
+
+f.writelines(<list of lines>)
+
+### Reading
+
+f.read([n])		--> next chars
+> if n notre difined, read up to end !
+
+f.readlines([n])	--> list of next lines
+
+f.readline()		--> nextline
+
+### Closing
+
+f.close()
+> NOTE : No need to close with WITH method

@@ -1,0 +1,46 @@
+---
+syntax: python
+tags: [ shared,variables,python ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ----------------------------------- Variable Assignement
+
+integer = 1
+
+string = "string"
+
+unicode_string = u"unicode_string"
+
+multi_line_string = """ multi-line
+	string
+	"""
+
+tuple = ( element1, element2, element3, ... )
+
+list = [ element1, element2, element3, ... ]
+
+dictionary = { key1 : value1, key2: value2, ... }
+
+dictionary[key]=value
+
+class_instance = ClassName(init_args)
+
+## ----------------------------------- Accessing Variable Values
+
+value = dictionary[key]
+
+value = dictionary.get(key, default_value)
+
+value = list[index]
+
+value = string[start:end]
+
+value = list[start:end]
+
+value = ClasseName.class_variable
+
+value = class_instance.instance_variable
+
+value = class_instance.function(args)

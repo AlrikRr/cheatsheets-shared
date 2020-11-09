@@ -1,0 +1,21 @@
+---
+tags : [shared, vgs, swap, lvm]
+---
+
+# RESIZE A SWAP PARTITION
+## Show volume groups
+$ sudo vgdisplay
+
+## Resize swap partition
+$ sudo lvresize -L 2G /dev/mapper/xxxx-swap_1
+
+#" Turn off swap
+$ sudo swapoff -a
+
+#" Re-make swap
+$ sudo mkswap /dev/mapper/xxxx-swap_1
+
+## If you put your swap UUID into the fstab file, don't forget to update the new UUID !
+
+## Turn on swap again
+$ sudo swapon -a

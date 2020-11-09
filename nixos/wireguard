@@ -1,0 +1,41 @@
+---
+tags: [shared, nixos, VPN]
+---
+
+# Installation 
+$ nix-env -iA nixos.wireguard
+
+# Creation du fichier ./wireguard.nix
+$ vim /etc/nixos/wireguard.nix
+
+# Mettre la conf
+
+# Générer des clés server
+$ umask 077
+$ mkdir /etc/wireguard
+$ wg genkey > /etc/wireguard/private
+$ wg pubkey < /etc/wireguard/private > /etc/wireguard/public
+
+# Générer des clés client
+$ mkdir -p /tmp/client
+$ wg genkey > /tmp/client/private
+$ wg pubkey < /tmp/client/private > /tmp/client/public
+
+# Mettre ./wireguard.nix dans configuration.nix CF fichier configuration
+
+# Rebuild nixos
+$ nixos-rebuild switch
+
+# Reload wireguard
+$ systemctl status wireguard-wg0.service
+$ systemctl restart wireguard-wg0.service
+
+# générer fichier conf pour le téléphone avec sa clé private
+# CF fichier conf_phone
+
+# Génère QRCODE 
+$ qrencode -t ansiutf8 < conf_phone
+
+# Ne pas oublié de faire une redirection de port sur livebox:50999
+
+

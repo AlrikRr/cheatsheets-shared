@@ -1,0 +1,16 @@
+---
+tags [shared, usb, format]
+---
+
+# MKFS 
+
+## Format USB with vfat
+sudo mkfs.vfat -n "NOM" -I /dev/sda1
+
+# Format USB with NTFS
+sudo mkfs.ntfs /dev/sda1
+
+# Format USB with EXT4
+sudo mkfs.ext4 /dev/sda1
+
+

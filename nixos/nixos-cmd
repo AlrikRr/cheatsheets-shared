@@ -1,0 +1,9 @@
+---
+tags: [ shared, nixos ]
+---
+
+# Rebuild config file
+$ nixos-rebuild switch
+
+# Install package
+$ nix-env -iA nixos.<package>

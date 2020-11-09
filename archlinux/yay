@@ -1,0 +1,15 @@
+---
+tag [shared, archlinux, yay]
+---
+
+# Yay
+
+# Import gpg keys
+gpg --keyserver pool.sks-keyservers.net --recv-keys [KEY-HERE]
+
+# Update 
+yay -Suy
+
+-----------------------------
+Author : AlrikRr
+-----------------------------
