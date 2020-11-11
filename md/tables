@@ -1,0 +1,55 @@
+---
+tags: [shared, markdown, html, tables ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Tables
+
+Title column 1 | Title column 2 | Title column 3
+ --- | --- | ---
+Cell 1.1 | Cell 2.1 | Cell 3.1
+Cell 1.2 | Cell 2.2 | Cell 3.2
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title column 1</th>
+            <th>Title column 2</th>
+            <th>Title column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cell 1.1</td>
+            <td>Cell 2.1</td>
+            <td>Cell 3.1</td>
+        </tr>
+        <tr>
+            <td>Cell 1.2</td>
+            <td>Cell 2.2</td>
+            <td>Cell 3.2</td>
+        </tr>
+    </tbody>
+</table>
+
+### Options
+
+---:
+<th align="right">
+
+:---:
+<th align="center">
+
+:---
+<th align="left">
+
+
+
+
+
+
+
+
+

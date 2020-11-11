@@ -1,0 +1,46 @@
+---
+tags: [shared, markdown, html, code ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Code
+
+### One line code
+
+`print("hello, friend.")`
+
+<code>print("hello, friend.")
+
+### Block code
+
+```
+<?php
+
+    echo "Hello, friend.";
+
+?>
+```
+<pre>
+    <?php
+
+        echo "Hello, friend.";
+
+    ?>
+</pre>
+
+
+### Block with syntax
+
+```php
+<?php
+
+    echo "Hello, friend.";
+?>
+```
+
+```python
+print("hello, friend.")
+```
+
+

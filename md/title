@@ -1,0 +1,28 @@
+---
+tags: [shared, markdown, html, title ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Titles
+
+# Level 1 title
+## Level 2 title
+### Level 3 title
+#### Level 4 title
+##### Level 5 title
+###### Level 6 title
+
+Level 1 title
+====================
+
+Level 2 title
+---------------------
+
+<h1> Level 1 title </h1>
+<h2> Level 2 title </h2>
+<h3> Level 3 title </h3>
+<h4> Level 4 title </h4>
+<h5> Level 5 title </h5>
+<h6> Level 6 title </h6>
+

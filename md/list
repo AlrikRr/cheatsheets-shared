@@ -1,0 +1,67 @@
+---
+tags: [shared, markdown, html, list ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Lists
+
+### Simple list
+
+* First element
+* Second element
+    * Sub element
+    * Sub element
+* Third element
+
+<ul>
+    <li>First element</li>
+    <li>Second element
+        <ul>
+            <li>Sub element</li>
+            <li>Sub element</li>
+        </ul>
+    </li>
+    <li>Third element</li>
+</ul>
+
+
+### Ordered list
+
+1. First element
+2. Second element
+    1. Sub element
+    2. Sub element
+3. Third element
+
+<ol>
+    <li>First element</li>
+    <li>Second element
+        <ol>
+            <li>Sub element</li>
+            <li>Sub element</li>
+        </ol>
+    </li>
+    <li>Third element</li>
+</ol>
+
+### Oredred and simple list
+
+1. First element
+    * Sub element
+    * Sub element
+2. Second element
+3. Third element
+
+<ol>
+    <li>First element
+        <ul>
+            <li>Sub element</li>
+            <li>Sub element</li>
+        </ul>
+    </li>
+    <li>Second element</li>
+    <li>Third element</li>
+</ol>
+
+

@@ -1,0 +1,52 @@
+---
+tags: [shared, markdown, html, checkbox ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Checkbox
+
+- [x] Checked 1
+- [ ] Not finished 2
+    - [x] Sub finished
+    - [ ] Sub not finished
+- [ ] Not finished 3
+
+<ul>
+    <li>
+        <label>
+            <input type="checkbox" checked>
+            Checked 1
+        </label>
+    </li>
+    <li>
+        <label>
+            <input type="checkbox">
+            Not finished 2
+        </label>
+    </li>
+    <ul>
+        <li>
+            <label>
+                <input type="checkbox" checked>
+                Sub finished
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox">
+                Sub not finished
+            </label>
+        </li>
+    </ul>
+    <li>
+        <label>
+            <input type="checkbox">
+            Not finished 3
+        </label>
+    </li>
+</ul>
+
+
+
+

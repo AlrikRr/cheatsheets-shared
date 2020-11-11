@@ -1,0 +1,33 @@
+---
+tags: [shared, markdown, html, syntax ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Syntax
+
+### Paragraph
+
+This is a text[space][space]
+This is another text
+
+<p> This is a text
+This is another text </p>
+
+### BOLD
+
+**some bold text**
+__some bold text__
+<strong> some bold text </strong>
+
+### ITALIC
+
+*some italic text*
+_some italic text_
+<em> some italic text </em>
+
+
+### STRIKE
+
+~~some barred text~~
+<s> some barred text </s>
