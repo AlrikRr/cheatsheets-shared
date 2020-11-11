@@ -1,0 +1,13 @@
+---
+syntax: python
+tags: [shared, python ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Time and timestamp
+
+### Example 1 : Date to timestamp
+
+import time
+timestamp = time.mktime(time.strptime('2015-10-20 22:24:46', '%Y-%m-%d %H:%M:%S'))
