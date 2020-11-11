@@ -1,9 +1,10 @@
 # cheatsheets-shared
 
 Download [cheat](https://github.com/cheat/cheat)
+You need to run `cheat` at least once to generate all the default configuration.
 
 ## config.yml
-Add thoses lines into the ~/.config/cheat/config.yml file
+Add those lines into your ~/.config/cheat/config.yml file, below your personal tag.
 ```
   - name: shared
     path: <path to cheatsheets-shared folder>
@@ -20,19 +21,19 @@ tags : [shared, tag1 , tag2 ]
 ---
 ```
 
-- Bash syntax here is an example, use the right syntax !
-- Use the shared tag, You are free to choose for the others
+- Bash syntax here is an example, you can use the syntax language you want.
+- Use the shared tag, you are free to choose the tags you want.
 
 ## Contribution
 
 You can contribute to this cheatsheets database !
 But, there are rules !
 
-- Write everything in English, or understandable English.
+- Write everything in English, or understandable English :smirk:
 
 - The cheatsheet name must be easy to understand and fast to type !
 
-- No duplicates
+- No duplicates !
 
 - If this is a language like python, put all the cheatsheets into a folder, like I did for **bash** and **python**
 
@@ -40,9 +41,9 @@ But, there are rules !
 
 - Be sure to use the **shared** tag !
 
-- If you want to create a folder, like I did for python, make sure to put a **model-cheat** inside, so that way if someone want to contribute to your category, he can use the same syntax.
+- If you want to create a folder, like I did for python, make sure to put a **model-cheat** inside, so that way if someone want to contribute to your category, he can use the same "template".
 
-- Well, if there is a model-cheat inside a category and you want to put your own cheatsheet, use the model !
+- Well, if there is a model-cheat inside a category and you want to put your own cheatsheet, use the "template" !
 
 - You can edit a cheatsheet that already exist.
 
