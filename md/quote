@@ -1,0 +1,21 @@
+---
+tags: [shared, markdown, html, quote ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Quotes
+
+> This is a quote
+> - Source
+
+<blockquote>
+    <p>This is a quote</p>
+    <cite>Source</cite>
+</blockquote>
+
+
+
+
+
+

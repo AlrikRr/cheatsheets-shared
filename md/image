@@ -1,0 +1,18 @@
+---
+tags: [shared, markdown, html, image ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Images
+
+![My picture](https://alrikrr.github.io/picture.png "My title, optional")
+
+<img src="https://alrikrr.github.io/picture.png" alt="My Picture" title="My title, optional">
+
+
+
+
+
+
+

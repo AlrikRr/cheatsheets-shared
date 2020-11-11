@@ -1,0 +1,30 @@
+---
+tags: [shared, markdown, html, link ]
+---
+
+# Markdown language & Syntax Cheat Sheet
+
+## ------------------------------ Link
+
+### Simple link
+
+[ Link to my blog ](https://alrikrr.github.io/)
+<a href="https://alrikrr.github.io"> Link to my blog </a>
+
+### Link with display title
+
+[ Link to my blog ](https://alrikrr.github.io/ "Title link")
+<a href="https://alrikrr.github.io" title="Title link"> Link to my blog </a>
+
+### Automatic link
+
+This link is automatic <https://alrikrr.github.io/>
+
+### Email link
+
+Email link : <contact.me@example.com>
+<a href="mailto:contact.me@example.com">contact.me@example.com</a>
+
+
+
+
