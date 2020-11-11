@@ -1,10 +1,10 @@
 # cheatsheets-shared
 
-Download [cheat](https://github.com/cheat/cheat)
-You need to run `cheat` at least once to generate all the default configuration.
+To use this collection of cheatsheets you need to download a tool called: [cheat](https://github.com/cheat/cheat)
+Upon installation run the `cheat` command without any arguments to generate all the default configuration.
 
 ## config.yml
-Add those lines into your ~/.config/cheat/config.yml file, below your personal tag.
+In your ~/.config/cheat/config.yml file, Add the following lines below your personal tag:
 ```
   - name: shared
     path: <path to cheatsheets-shared folder>
@@ -21,33 +21,35 @@ tags : [shared, tag1 , tag2 ]
 ---
 ```
 
-- Bash syntax here is an example, you can use the syntax language you want.
-- Use the shared tag, you are free to choose the tags you want.
+- You can use whatever syntax you want. For this example we use the bash syntax.
+- Remember to use the `shared` tag, followed by tags you find relevant to the cheatsheet (Ex: `networking`, `sysadmin`, ...etc).
 
 ## Contribution
 
-You can contribute to this cheatsheets database !
-But, there are rules !
+All contributions to this database are welcome!
+But, there are rules (Yes we're familiar with the second law of thermodynamics, but please make an effort!):
 
-- Write everything in English, or understandable English :smirk:
+- Write everything in English, or understandable English :smirk:, or find a friend that can do the translation for you.
 
-- The cheatsheet name must be easy to understand and fast to type !
+- The cheatsheet name must be unambiguous and fast to type !
 
 - No duplicates !
 
-- If this is a language like python, put all the cheatsheets into a folder, like I did for **bash** and **python**
+- No duplicates !
+
+- If you're writing cheatsheets for a programming language, group them into a single folder, like I did for **bash** and **python**
 
 - I don't have a syntax for cheatsheets, if it's easy to understand and not a mess, go ahead.
 
-- Be sure to use the **shared** tag !
+- Be sure to use the **shared** tag ! (In an alternate universe, this would be the first rule)
 
-- If you want to create a folder, like I did for python, make sure to put a **model-cheat** inside, so that way if someone want to contribute to your category, he can use the same "template".
+- If you're creating a folder, like I did for python, make sure to put a **model-cheat** inside, so that way if someone want to contribute to your category, he can use the same "template".
 
-- Well, if there is a model-cheat inside a category and you want to put your own cheatsheet, use the "template" !
+- Well, if there is a model-cheat inside a category and you want to put your own cheatsheet, use the "template" ! (I know, redundant rule, but i've been on the internet way to long not to include it)
 
-- You can edit a cheatsheet that already exist.
+- You can edit a cheatsheet that already exist. (In layman's terms: No duplicates !)
 
-- If you want to put you name into the cheatsheet, put it at the end of the file like :
+- If you want to put your name into the cheatsheet ([attention whore](https://en.wiktionary.org/wiki/attention_whore)), put it at the end of the file like :
 ```
 -----------------------------
 Author : AlrikRr
@@ -62,3 +64,4 @@ Edited : Michel, Bernard
 -----------------------------
 ```
 
+- Ignore these rules and become our lifelong enemy or just have your pull request rejected ( depending on the mood of the maintainer that day) 
