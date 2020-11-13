@@ -16,7 +16,7 @@ class ClassName(SuperClass):
 		<function body>
 		return return_value
 
-### e.g
+### ----------------------  e.g
 
 class MyClass(object):
 	offset = 1
@@ -32,3 +32,43 @@ c = MyClass(2)
 c.value # output : 2
 
 c.get_offset_value() # output : 3
+
+### ---------------------- setattr()
+
+Class Person():
+	Pass
+
+person = Person()
+
+setattr(person, 'first', 'AlrikRr')
+
+print(person.first) --> AlrikRr
+
+### ---------------------- getattr()
+
+Class Person():
+	Pass
+
+person = Person()
+first_key = "AlrikRr
+setattr(person, first_key)
+
+first = getattr-person, first_key)
+
+print(first) --> AlrikRr
+
+### ---------------------- Dynamic Values
+
+Class Person():
+	Pass
+
+person = Person()
+person.first = "AlrikRr"
+person.age = 23
+
+print(person.first) --> AlrikRr
+print(person.age) --> 23
+
+### ---------------------- Dynamic Values from variable
+
+

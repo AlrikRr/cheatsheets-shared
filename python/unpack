@@ -1,0 +1,44 @@
+---
+syntax: python
+tags: [shared, python, unpacking ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ----------------------------------- Unpacking
+
+a, b = (1, 2)
+
+print(a) --> 1
+print(b) --> 2
+
+### -------------------- Ignore variable
+
+a, _ = (1, 2)
+
+print(a) --> 1
+
+### -------------------- Unpacking multiple variables
+
+a, b, *c = (1,2,3,4,5)
+
+print(a) --> 1
+print(b) --> 2
+print(c) --> [3,4,5]
+
+Works with _ too 
+
+### -------------------- Unpacking multiple variables 2
+
+a, b, *_, d = (1, 2, 3, 4, 5, 6, 7)
+
+print(a) --> 1
+print(b) --> 2
+print(d) --> 7
+
+a, b, *c, d = (1, 2, 3, 4, 5, 6, 7)
+
+print(a) --> 1
+print(b) --> 2
+print(c) --> [3, 4, 5, 6]
+print(d) --> 7

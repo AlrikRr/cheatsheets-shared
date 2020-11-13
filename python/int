@@ -1,0 +1,28 @@
+---
+syntax: python
+tags: [shared, python, int, numbers ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Integers
+
+### BIG NUMBERS
+
+num1 = 10000000000
+num2 = 100000000
+
+You could simply do :
+
+num1 = 10_000_000_000
+num2 = 100_000_000
+
+It's the same !
+
+### Output BIG NUMBERS
+
+total = 10_000_000_000 + 100_000_000
+
+print(f'{total:,}')
+
+Output --> 10,100,000,000

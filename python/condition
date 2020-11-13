@@ -27,3 +27,18 @@ if i ==2 or x == 2:
 else:
 	print("Both are not 2")
 
+## ------------------------------ Ternary Condition
+
+### What you do :
+condition = True
+
+if condition:
+	x = 1
+else:
+	x = 0
+
+### What you should do:
+condition = True
+
+x = 1 if condition else 0
+

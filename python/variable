@@ -44,3 +44,4 @@ value = ClasseName.class_variable
 value = class_instance.instance_variable
 
 value = class_instance.function(args)
+

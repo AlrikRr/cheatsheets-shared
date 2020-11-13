@@ -1,0 +1,23 @@
+---
+syntax: python
+tags: [shared, python, help, dir ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Help function
+
+### ------------------------ e.g
+
+import smtpd
+
+help(smtpd)
+
+## ------------------------------ Dir function
+
+### ------------------------ e.g
+
+from datetime import datetime
+
+dir(datetime)
+

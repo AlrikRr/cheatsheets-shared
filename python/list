@@ -1,0 +1,30 @@
+---
+syntax: python
+tags: [shared, python, list ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ List manipulation
+
+### ------------------------ Loop with 2 or more lists with same index
+
+names = ['Peter Parker', 'Clark Kent', 'Wade Wilson', 'Bruce Wayne']
+heroes = ['Spiderman', 'Superman', 'Deadpool', 'Batman']
+universes = ['Marvel', 'DC', 'Marvel', 'DC']
+
+for name, hero, universe in zip(names, heroes, universes):
+	print(f'{name} is actually {hero} from {universe}')
+
+### ----------------------- Same but Uses less energy
+
+names = ['Peter Parker', 'Clark Kent', 'Wade Wilson', 'Bruce Wayne']
+heroes = ['Spiderman', 'Superman', 'Deadpool', 'Batman']
+universes = ['Marvel', 'DC', 'Marvel', 'DC']
+
+for name, hero, universe in izip(names, heroes, universes):
+	print(f'{name} is actually {hero} from {universe}')
+
+
+
+

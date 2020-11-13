@@ -1,0 +1,19 @@
+---
+syntax: python
+tags: [shared, python, input, getpass ]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ Input
+
+### ------------------------ Simple way
+
+username = input('Username: ')
+
+### ----------------------- Hide password
+
+from getpass import getpass
+
+username = input('Username: ')
+password =  getpass('Password: ')

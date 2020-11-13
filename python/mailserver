@@ -1,0 +1,10 @@
+---
+syntax: python
+tags: [shared, python, mailserver, smtpd]
+---
+
+# Python Language & Syntax Cheat Sheet
+
+## ------------------------------ SMTPD
+
+python -m smtpd -c DebuggingServer -n localhost:1025
