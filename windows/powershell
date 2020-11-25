@@ -1,0 +1,15 @@
+---
+syntax: powershell
+tags: [shared, windows, powershell ]
+---
+
+# Windows Cheat Sheets & Usefull commands
+
+## ------------------------------ Powershell 
+
+### Display Drive
+
+PS> GEt-PsDrive
+
+
+

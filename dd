@@ -27,3 +27,6 @@ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
 
 # Flash ISO to USB
 dd if=/path/to/iso of=/dev/sdx bs=4M status=progress
+
+# Copy SD Card
+dd if=/dev/sdX of=backup.img
