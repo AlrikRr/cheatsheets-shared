@@ -65,3 +65,8 @@ Edited : Michel, Bernard
 ```
 
 - Ignore these rules and become our lifelong enemy or just have your pull request rejected ( depending on the mood of the maintainer that day) 
+
+# Contributors
+<a href="https://github.com/AlrikRr/cheatsheets-shared/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=AlrikRr/cheatsheets-shared" />
+</a>
